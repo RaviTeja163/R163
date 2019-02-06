@@ -10,12 +10,10 @@ int main()
 		int r = temp % 2;
 		arr[i] = r;
 		temp = temp / 2;
-		printf("%d",arr[i]);
 	}
-	printf("\n%d\n,i");
 	int j;
-	for(j=i;j>=0;j--)
-		printf("%d", arr[i]);
+	for(j=i-1;j>=0;j--)
+		printf("%d", arr[j]);
 	getchar();
 	getchar();
 	return 0;
