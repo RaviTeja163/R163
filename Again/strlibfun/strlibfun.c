@@ -1,5 +1,6 @@
 #include<stdio.h>
 #include<string.h>
+#include<stdlib.h>
 
 int my_strcmp(char *s1, char *s2)
 {
@@ -79,10 +80,10 @@ int main()
 	int choice,result;
 
 	do{
-	printf("Enter the input string which is less than 50 characters\n");
+	printf("Enter the required choice and the input string\n1.String Reverse\n2.String Copy\n3.String Concatenation\n4.String Compare\n5.Exit\n");
+	scanf("%d\n", &choice);
 	gets(input_string);
-	printf("Enter the required choice\n1.String Reverse\n2.String Copy\n3.String Concatenation\n4.String Compare\n5.Exit\n");
-	scanf("%d", &choice);
+	fflush(stdin);
 	switch (choice)
 	{
 	case 1:
