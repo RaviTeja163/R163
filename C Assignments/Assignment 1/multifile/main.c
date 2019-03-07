@@ -5,14 +5,14 @@ float res2 = -1;
 int add(int, int);
 int sub(int, int);
 long int mul(int, int);
-float div(int, int);
+float divi(int, int);
 int main()
 {
 	int a, b, c;
 	printf("Enter the inputs\n");
-	scanf_s("%d %d", &a, &b);
+	scanf("%d %d", &a, &b);
 	printf("Enter your choice\n1)Addition\n2)Subtraction\n3)Multiplication\n4)Division\n");
-	scanf_s("%d", &c);
+	scanf("%d", &c);
 	switch (c)
 	{
 	case 1:
@@ -29,10 +29,9 @@ int main()
 	}
 	case 4:
 	{
-		res2 = div(a, b); printf("Quotient=%f\n", res2); break;
+		res2 = divi(a, b); printf("Quotient=%f\n", res2); break;
 	}
 	}
-	getchar();
-	getchar();
+
 	return 0;
 }

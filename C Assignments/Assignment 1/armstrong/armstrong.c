@@ -3,8 +3,8 @@
 int main()
 {
 	int n, temp, s = 0;
-	printf("Enter a number");
-	scanf_s("%d", &n);
+	printf("Enter a number\n");
+	scanf("%d", &n);
 	temp = n;
 	while (temp > 0)
 	{
@@ -16,7 +16,6 @@ int main()
 		printf("%d is an armstrong number", n);
 	else
 		printf("%d is not an armstrong number", n);
-	getchar();
 	getchar();
 	return 0;
 	//system("pause");
