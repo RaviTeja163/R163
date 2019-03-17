@@ -15,12 +15,12 @@ public:
 		real=r;
 		img=i;
 	}
-	Complex(Complex &c)
+	/*Complex(Complex &c)
 	{
 		cout<<"Copy constructor"<<endl;
 		real=c.real;
 		img=c.img;
-	}
+	}*/
 	~Complex()
 	{
 		cout<<"Destructor"<<endl;
@@ -42,7 +42,7 @@ public:
 	Complex operator-()
         {
                 Complex temp;
-		temp.real=-real;
+				temp.real=-real;
                 temp.img=-img;
                 return (temp);
         }
@@ -50,7 +50,7 @@ public:
         {
                 ++real;
                 ++img;
-                return (*this);
+                return *(this);
         }
 	 Complex operator++(int x)
         {
@@ -63,7 +63,7 @@ public:
 	{
                 real=c.real;
                 img=c.img;
-                return (*this);
+                return *(this);
 	}
 	Complex operator,(Complex c)
         {
@@ -78,7 +78,7 @@ public:
 };
 ostream& operator<<(ostream& cout,Complex c)
 {
-	cout<<c.real<<"+i"<<c.img<<endl;
+	cout<<c.real<<"+i("<<c.img<<")"<<endl;
 	return cout;
 }
 istream& operator>>(istream& cin,Complex &c)
@@ -88,25 +88,21 @@ istream& operator>>(istream& cin,Complex &c)
 }
 int main()
 {
-	Complex c1,c2(3,4),c3(c2),c4,c5,c6;
+	Complex c1,c2(3,4),/*c3(c2),*/c4,c5,c6;
 	cout<<"Enter complex number"<<endl;
 	cin>>c1;
 	cout<<c1;
 	cout<<c2;
-	cout<<c3;
-	cout<<c4;
-	cout<<c5;
-	cout<<c6;
-	/*c4=c1+c2;
+	c4=c1+c2;
 	cout<<c4;
 	c5=c2-c1;
 	cout<<c5;
-	c6=-c3;
+	c6=-c2;
 	cout<<c6;
 	c6=++c1;
 	cout<<c6;
-	c6=c2++;
-	cout<<c6;*/
-	
+	c6=c1++;
+	cout<<c6;
+
 	return 0;
 }
