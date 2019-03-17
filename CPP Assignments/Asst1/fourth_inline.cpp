@@ -1,13 +1,13 @@
 #include<iostream>
 using namespace std;
-class C{
-	int a,b,sum,diff,pro,modu;
+class Cl{
+	int op1,op2,sum,diff,pro,rem;
 	float quo;
 public:
-	C(int i,int j)
+	Cl(int i,int j)
 	{
-		a=i;
-		b=j;
+		op1=i;
+		op2=j;
 	}
 	void add();
 	void sub();
@@ -15,33 +15,30 @@ public:
 	void div();
 	void mod();
 };
-inline void C :: add() 
-{ 
-    sum = a+b; 
-    cout << "Addition of two numbers: " << sum << endl; 
+inline void C :: add()
+{
+    sum = op1+op2;
+    cout << "Addition of two numbers: " << sum << endl;
 }
-inline void C :: sub()       
-{ 
-    diff = a-b; 
+inline void C :: sub()
+{
+    diff = op1-op2;
     cout << "Difference of two numbers: " << diff << endl;
-} 
-inline void C :: mul()       
-{ 
-    pro = a*b; 
+}
+inline void C :: mul()
+{
+    pro = op1*op2;
     cout << "Product of two numbers: " << pro << endl;
-} 
-inline void C :: div()       
-{ 
-    quo = (float)a/b; 
+}
+inline void C :: div()
+{
+    quo = (float)op1/op2;
     cout << "Division of two numbers: " << quo << endl;
 }
-inline void C :: mod()       
-{ 
-    if(a<0)
-	modu=-a;
-    else
-	modu = a; 
-    cout << "Modulus of first number: " << modu << endl;
+inline void C :: mod()
+{
+    rem=op1%op2;
+    cout << "Remainder: " << rem << endl;
 }
 
 int main()
@@ -49,7 +46,7 @@ int main()
 	int a,b;
 	cout<<"Enter the two numbers"<<endl;
 	cin>>a>>b;
-	C c(a,b);
+	Cl c(a,b);
 	c.add();
 	c.sub();
 	c.mul();
