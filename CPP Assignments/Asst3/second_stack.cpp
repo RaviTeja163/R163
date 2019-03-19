@@ -54,7 +54,7 @@ int main()
 	cout << "Size of the char* stack is " << s2.findsize() << endl;
 	cout << "Top of the char* stack is " << s2.pop() << endl;
 
-    /*Stack<int> s;
+    /*Stack<int> s3;  
 	s.push(1);
 	s.push(4);
 	s.push(16);
