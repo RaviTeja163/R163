@@ -26,7 +26,7 @@ public:
 			rear->next=NULL;
 			front=rear;
 		}
-		esle
+		else
 		{
 			struct node *temp;
 			temp=new node;

@@ -58,9 +58,9 @@ int main()
 {
 	Queue q;
 	int ch;
-	cout<<"1.Insert element\n2.Delete element\n3.Display elements\n4.Exit"<<endl;
 	do{
 		cout<<"Enter your choice:"<<endl;
+		cout<<"1.Insert element\n2.Delete element\n3.Display elements\n4.Exit"<<endl;
 		cin>>ch;
 		switch(ch)
 		{
